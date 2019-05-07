@@ -19,11 +19,9 @@ try:
             if request.form['light'] == "ON":
                 #turn light on
                 GPIO.output(in1, True)
-                print("lights on")
             elif request.form['light'] == "OFF":
                 #turn light off
                 GPIO.output(in1, False)
-                print("lights off")
         return render_template('index.html')
 
     if __name__ == "__main__":
